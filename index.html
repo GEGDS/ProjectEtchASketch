@@ -8,6 +8,27 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
+    
+
+    <div id="container">
+        <div class="title"><h1>Etch-A-Sketch</h1></div>
+        <div class="mode"><Mode:coloring></Mode:coloring></div>
+            <div class="gridContents"></div>   
+            <div class="buttons">
+                <button onclick="changeColor('black')">Black</button>
+                <button onclick="changeColor('white')">Eraser</button>
+                <button onclick="changeColor('random')">Rainbow</button>
+                <button onclick="clearGrid()">Clear</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of the Grid" value="16" onchange="changeSize(this.value)">
+                <button>Set Size</button>
+            </div>
+            <div class="error">
+                error only values between 2 and 100
+            </div>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>
