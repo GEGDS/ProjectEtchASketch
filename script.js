@@ -1,6 +1,8 @@
 let color = "black";
 let click = true;
 
+
+//A function that fill the drawing with the color selected
 function fillGridContents(size) {
     let gridContents = document.querySelector(".gridContents");
     let squares = gridContents.querySelectorAll("div");
@@ -20,6 +22,9 @@ for (let i = 0; i < amount; i++) {
 
 fillGridContents(16);
 
+
+//change the grid size between 2 and 100 
+//returns an error message when the size is not between 2 and 100
 function changeSize(input) {
   if (input >= 2 && input <= 100) {
     document.querySelector(".error").style.display = "none";
@@ -29,6 +34,8 @@ function changeSize(input) {
   }
 }
 
+
+//a function that returns the color selection
 function colorSquare() {
    if (click) {
     if (color === 'random') {
@@ -45,12 +52,17 @@ function changeColor(choice) {
     color = choice;
 } 
 
+
+//a function that clear the grid
 function clearGrid() {
     let gridContents = document.querySelector(".gridContents");
     let squares = gridContents.querySelectorAll("div");
     squares.forEach((div) => div.style.backgroundColor = "white");
 }
 
+
+//conditional structure that makes the click display when it is coloring and when its not 
+//click doesn't work when the cursor its on the buttons
 document.querySelector("body").addEventListener("click", (e) => {
     if (e.target.tagName != "BUTTON") {
       click = !click;
