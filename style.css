@@ -1,5 +1,57 @@
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .gridContents {
+    border: solid 8px darkblue;
+    box-shadow: 0 0 1em blue;
     width: 500px;
     height: 500px;
     display: grid;
 }
+
+.title{
+    display: flex;
+    justify-content: center;
+    color: darkblue;
+}
+
+.mode {
+    font-weight: bolder;
+    padding-bottom: 8px;
+}
+
+.buttons {
+    padding-top: 10px;
+}
+
+button {
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    font-weight: 700;
+    text-align: center;
+}
+
+button:hover {
+    cursor: pointer;
+  }
+
+  .blackButton {
+    background-color: black;
+    color: white;
+  }
+  
+  .randomButton {
+    background: linear-gradient(0.25turn, blue, white, purple);
+  }
+
+   .error {
+    font-weight: 800;
+    color:red;
+   }

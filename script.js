@@ -21,12 +21,12 @@ for (let i = 0; i < amount; i++) {
 fillGridContents(16);
 
 function changeSize(input) {
-    if (input >= 2 && input <= 100 ) {
-       document.querySelector('.error').style.display = 'none'
-    } else {
-        document.querySelector('.error').style.display = 'flex'
-    }
-    
+  if (input >= 2 && input <= 100) {
+    document.querySelector(".error").style.display = "none";
+    fillGridContents(input);
+  } else {
+    document.querySelector(".error").style.display = "flex";
+  }
 }
 
 function colorSquare() {
